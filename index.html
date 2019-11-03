@@ -21,18 +21,9 @@
   <script type="text/babel">
 
     function App(props) {
-      console.log(props)
       return (
         <div>
-          {props.children}
-        </div>
-      );
-      
-    }
-
-    ReactDOM.render(
-      <App>
-        <nav className='links'>
+            <nav className='links'>
           <ul className="medium-small">
             <li><a href='#about-me'>About Me</a></li>
             <li><a href='#work-experience'>Work Experience</a></li>
@@ -41,7 +32,7 @@
           </ul>
         </nav>
         <header>
-          <h1>Sally Student</h1>
+          <h1>{props.name}</h1>
           <h3>Full Stack Web Development</h3>
         </header>
         <main>
@@ -87,7 +78,7 @@
             </div>
           </section>
           <section className="name-and-pic">
-            <h2>Sally Student</h2>
+            <h2>{props.name}</h2>
             <div className="picture-box">
               <img src="https://live.staticflickr.com/4322/35426075543_935a68304d_z.jpg" width="288" height="280" alt="Closeup of Sally"/>
             </div>
@@ -100,6 +91,14 @@
               <li><a href="https://www.twitter.com/SalSopSaa">@SalSopSaa</a></li>
             </ul>
         </address></footer>
+        </div>
+      );
+      
+    }
+
+    ReactDOM.render(
+      <App name='Sally Student'>
+        
       </App>,
       document.querySelector('#application-root')
     );
