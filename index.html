@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sally's Resume">
+  <title>Sally's Resume</title>
+  <link rel="stylesheet" type="text/css" href="reset.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto&display=swap" rel="stylesheet">
+</head>    
+<body>
+  <div id="application-root"></div>
+  
+  <script src="https://unpkg.com/react@16/umd/react.development.js">
+  </script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+  </script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js">
+  </script>
+  <script type="text/babel">
+
+    function App(props) {
+      console.log(props)
+      return (
+        <div>
+          {props.children}
+        </div>
+      );
+      
+    }
+
+    ReactDOM.render(
+      <App>
+        <nav className='links'>
+          <ul className="medium-small">
+            <li><a href='#about-me'>About Me</a></li>
+            <li><a href='#work-experience'>Work Experience</a></li>
+            <li><a href='#education'>Education</a></li>
+            <li><a href='#contact'>Contact</a></li>
+          </ul>
+        </nav>
+        <header>
+          <h1>Sally Student</h1>
+          <h3>Full Stack Web Development</h3>
+        </header>
+        <main>
+          <section className='about-me ' id='about-me'>
+            <h2>About Me</h2>
+            <div><span className='subject bold'>Technical Skills</span><span className='info'>HTML, CSS, JavaScript</span></div>
+            <div><span className='subject bold'>Languages</span><span className='info'>Italian, English</span></div>
+            <div><span className='subject bold'>Art Technology</span><span className='info'>Adobe Photoshop, Adobe Premiere Pro, Illustrator</span></div>
+            <div><span className='subject bold'>Interests</span><span className='info'>Cycling, Wine, Board Games</span></div>
+          </section>
+          <section className='work-experience' id='work-experience'>
+            <h2>Work Experience</h2>
+            <div className='job'>
+              <span className='bold'>Statistics Canada</span>
+              <br/>
+              <span>Enumberator, Census 2011</span>
+              <ul>
+                <li>Helped and convinced respndents in their dwelling to fill in the census forms</li>
+                <li>Fixed Discrepancies in respondents answers to prevent anomalies in the 2011 Census</li>
+              </ul>
+            </div>
+            <div className='job'>
+                <span className='bold'>McDonald's, Aramark Canada, Compass Group</span>
+              <br/>
+              <span>Cashier, Food SErvices</span>
+              <ul>
+                <li>Worked in various food services company as a part time job during studies</li>
+                <li>Provided excellent customer service while executing quick transactions with accuracy in a stressful and fast paced enveronment</li>
+              </ul>
+            </div>
+          </section>
+          <section className='education' id='education'>
+            <h2>Education</h2>
+            <div className='school'>
+              <span className='bold'>Greendale Community College</span>
+              <br/>
+              <span>2009-2015</span>
+              <ul>
+                  <li>Honors Bachelor of Anthropology</li>
+                  <li>Cummulative Average: 71%</li>
+                  <li>Honors: Dean's Honors List</li>
+              </ul>
+            </div>
+          </section>
+          <section className="name-and-pic">
+            <h2>Sally Student</h2>
+            <div className="picture-box">
+              <img src="https://live.staticflickr.com/4322/35426075543_935a68304d_z.jpg" width="288" height="280" alt="Closeup of Sally"/>
+            </div>
+          </section>
+        </main>
+        <footer><address className="contact" id="contact">
+            <ul>
+              <li><a href="mailto:Sally@fake3mail.com">Sally@fake3mail.com</a></li>
+              <li>555.555.5555</li>
+              <li><a href="https://www.twitter.com/SalSopSaa">@SalSopSaa</a></li>
+            </ul>
+        </address></footer>
+      </App>,
+      document.querySelector('#application-root')
+    );
+    
+  </script>
+</body>
+</html>
